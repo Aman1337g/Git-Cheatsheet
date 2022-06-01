@@ -127,7 +127,7 @@ Then add your key and you are good to go.
 
 <br>
 
-- ```git config --global alias.st status``` = will set alias for **git status** as **git st** globally. (You can create your own shortcuts according to your convinience)
+- ```git config --global alias.st status``` = will set alias for **git status** as **git st** globally. (You can create your own shortcuts according to your convenience)
 
 <br>
 
