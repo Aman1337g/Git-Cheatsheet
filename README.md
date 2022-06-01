@@ -203,3 +203,8 @@ git tag -a v1.1``` = [to create a tag properly we use -a](here vim editor will o
 					   
 - ```cat <file>``` = will show the contents present in the file
 
+<br>
+<hr>
+
+### To test your Knowlege you can go to - https://git-school.github.io/visualizing-git/
+
