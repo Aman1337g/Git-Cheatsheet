@@ -201,7 +201,7 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 - ```git show <commit ID>``` = will show the information about repo at given <commit ID> if we do not mention the commit ID then will 
                        show information about the last commit.
 					   
-- ```cat <file>``` = will show the contents present in the file
+- ```cat <file>``` = will show the contents present a file
 
 <br>
 <hr>
