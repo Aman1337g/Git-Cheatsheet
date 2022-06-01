@@ -189,8 +189,8 @@ Then add your key and you are good to go.
 
 - ```git tag v1.0``` = [soft tag]will store the current state (version) of your repository as verison v1.0 [Mostly used in production]
 - ```git tag --list``` = will show all the tags created
-git tag -a v1.1``` = [to create a tag properly we use -a](here vim editor will open and you have to write the metadata also)
-- ```git checkout <tag name>``` = to switch to the state of given <tag name>
+git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open and you have to write the metadata also)
+- ```git checkout <tag name>``` = to switch to the state of given tag name
 
 <br>
 
