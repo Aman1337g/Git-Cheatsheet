@@ -90,6 +90,11 @@ author email
 - ```git checkout HEAD``` = will move to the state of latest commit.
 - ```git checkout --<file_name>``` = will restore to the state when previous commit was done
 - ```git checkout -f``` = will restore your whole working directory
+
+<br>
+
+# ||UNDO||
+
 - ```git reset``` = will remove all the files from the staging area
 - ```git reset --soft [hash of the commit upto which you want to delete the commit]``` = will not undo the changes but will 
 delete the commits above the specified hash of the commit.
@@ -139,7 +144,8 @@ Then add your key and you are good to go.
 - ```git branch newbranchname``` = will create a new branch with name **newbranchname**
 - ```git checkout -b newbranchname``` = will create and switch to the new branch
 - ```git checkout master``` = to switch again to master branch
-- ```git commit -a -m "message"``` = to skip the staging
+- ```git commit -a -m "message"``` = to skip the staging area and directly commit
+> Each commit has a unique SHA-1 hash and is 160bits or (20bytes).
 - ```git commit --amend``` = now we can add the changes done in the previous commit without adding a new commit.
 - ```git branch``` = to list all the branches in your git repository
 - ```git merge branch_name``` = will merge branch in master branch
