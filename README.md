@@ -212,5 +212,19 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 <br>
 <hr>
 
+# ||RENAMING GIT BRANCH||
+
+- To rename a branch while pointed to any branch:
+```git branch -m <oldname> <newname>```
+
+- To rename the current branch:
+```git branch -m <newname>```
+
+- To push the local branch and reset the upstream branch:
+```git push origin -u <newname>```
+
+- To delete the remote branch:
+```git push origin --delete <oldname>```
+
 ### To test your Knowlege you can go to - https://git-school.github.io/visualizing-git/
 
