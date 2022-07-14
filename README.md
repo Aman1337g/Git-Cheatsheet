@@ -28,7 +28,7 @@
 
 <br> 
 
-GIT LOG
+### GIT LOG
 
 - ```git log``` = will show all the commits made by an user with his/her name,date,email,time
 - ```git log -p``` = will show the log and the files added or deleted by someone.
@@ -83,7 +83,7 @@ author email
 
 <br>
 
-# CHECKOUT
+## CHECKOUT
 
 - ```git checkout``` = (can be used to change the current state of your repository (to move among) 1.branch 2.commit 3.tag)
 - ```git checkout <commit hash>``` = will move to the state of that commit
@@ -93,7 +93,7 @@ author email
 
 <br>
 
-# UNDO
+## UNDO
 
 - ```git reset``` = will remove all the files from the staging area
 - ```git reset --soft [hash of the commit upto which you want to delete the commit]``` = will not undo the changes but will 
@@ -102,7 +102,7 @@ delete the commits above the specified hash of the commit.
 
 <br>
 
-# Working with git Server
+## Working with git Server
 - ```git remote``` = will show if you are connected to a server(Github etc..) or not 
 - ```git remote add origin <Your repo link>``` = set the repository name to origin on git server.
 - ```git remote -v``` = will tell you from where are you pushing and pulling a file
@@ -110,7 +110,7 @@ delete the commits above the specified hash of the commit.
 
 <br>
 
-# Adding SSH key to your github account 
+## Adding SSH key to your github account 
 - **Step1**: ssh-keygen -t ed25519 -C "your_email@example.com" <br>
 
     > (here we are using ed25519 algorithm which is latest otherwise
@@ -128,7 +128,7 @@ delete the commits above the specified hash of the commit.
 Then add your key and you are good to go.
 <!-- <Then write git push -u origin master> -->
 
-# Setting aliases in Git
+## Setting aliases in Git
 
 <br>
 
@@ -136,7 +136,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# BRANCH
+## BRANCH
 
 <br>
 
@@ -160,7 +160,7 @@ Then add your key and you are good to go.
 - ```git branch --list``` = will show the no. of branches(condition: there should be some content in the branch and are commited)
 - ```touch file_name``` = will create a file with name file_name
 
- Types of branching workflow = 1.Long Running Branches 2.Short Running Branches
+> Types of branching workflow = 1.Long Running Branches 2.Short Running Branches
 
 - ```git push origin bugfix``` = will push a branch named bugfix in the master branch origin
 [NOTE: Always remember to be in the same branch which you want to push]
@@ -174,7 +174,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# GIT STASH
+## GIT STASH
 
 <br>
 
@@ -189,7 +189,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# TAG
+## TAG
 
 <br>
 
@@ -200,7 +200,7 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 
 <br>
 
-# SHOW
+## SHOW
 
 <br>
 
@@ -211,7 +211,7 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 
 <br>
 
-# RENAMING GIT BRANCH
+## RENAMING GIT BRANCH
 
 - To rename a branch while pointed to any branch:
 ```git branch -m <oldname> <newname>```
