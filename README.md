@@ -295,7 +295,7 @@ More information on git commands.
 
 4. **git prune** (http://www.kernel.org/pub/software/scm/git/docs/git-prune.html) - Removes objects that are no longer pointed to by any object in any reachable branch.
 
-5. **git-daemon** (http://www.kernel.org/pub/software/scm/git/docs/git-daemon.html) - Runs a simple, unauthenticated wrapper on the git-upload-pack program, used toprovide efficient, anonymous and unencrypted fetch access to a Git repository.
+5. **git daemon** (http://www.kernel.org/pub/software/scm/git/docs/git-daemon.html) - Runs a simple, unauthenticated wrapper on the git-upload-pack program, used toprovide efficient, anonymous and unencrypted fetch access to a Git repository.
 
 
 ### To test your Knowlege you can go to - https://git-school.github.io/visualizing-git/
