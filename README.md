@@ -28,7 +28,7 @@
 
 <br> 
 
-# ||GIT LOG||
+GIT LOG
 
 - ```git log``` = will show all the commits made by an user with his/her name,date,email,time
 - ```git log -p``` = will show the log and the files added or deleted by someone.
@@ -83,7 +83,7 @@ author email
 
 <br>
 
-# ||CHECKOUT||
+# CHECKOUT
 
 - ```git checkout``` = (can be used to change the current state of your repository (to move among) 1.branch 2.commit 3.tag)
 - ```git checkout <commit hash>``` = will move to the state of that commit
@@ -93,7 +93,7 @@ author email
 
 <br>
 
-# ||UNDO||
+# UNDO
 
 - ```git reset``` = will remove all the files from the staging area
 - ```git reset --soft [hash of the commit upto which you want to delete the commit]``` = will not undo the changes but will 
@@ -102,7 +102,7 @@ delete the commits above the specified hash of the commit.
 
 <br>
 
-# ||Working with git Server||
+# Working with git Server
 - ```git remote``` = will show if you are connected to a server(Github etc..) or not 
 - ```git remote add origin <Your repo link>``` = set the repository name to origin on git server.
 - ```git remote -v``` = will tell you from where are you pushing and pulling a file
@@ -110,7 +110,7 @@ delete the commits above the specified hash of the commit.
 
 <br>
 
-# ||Adding SSH key to your github account|| 
+# Adding SSH key to your github account 
 - **Step1**: ssh-keygen -t ed25519 -C "your_email@example.com" <br>
 
     > (here we are using ed25519 algorithm which is latest otherwise
@@ -128,7 +128,7 @@ delete the commits above the specified hash of the commit.
 Then add your key and you are good to go.
 <!-- <Then write git push -u origin master> -->
 
-# ||Setting aliases in Git||
+# Setting aliases in Git
 
 <br>
 
@@ -136,7 +136,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# ||BRANCH||
+# BRANCH
 
 <br>
 
@@ -174,7 +174,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# ||GIT STASH||
+# GIT STASH
 
 <br>
 
@@ -189,7 +189,7 @@ Then add your key and you are good to go.
 
 <br>
 
-# ||TAG||
+# TAG
 
 <br>
 
@@ -200,7 +200,7 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 
 <br>
 
-# ||SHOW||
+# SHOW
 
 <br>
 
@@ -210,9 +210,8 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 - ```cat <file>``` = will show the contents present a file
 
 <br>
-<hr>
 
-# ||RENAMING GIT BRANCH||
+# RENAMING GIT BRANCH
 
 - To rename a branch while pointed to any branch:
 ```git branch -m <oldname> <newname>```
@@ -225,6 +224,79 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 
 - To delete the remote branch:
 ```git push origin --delete <oldname>```
+<br>
+
+# Commands Overview
+
+More information on git commands.
+
+## Basic Git
+1. **git config** (http://www.kernel.org/pub/software/scm/git/docs/git-config.html) - Sets configuration values for things like your user name, email, andgpg key, your  preferred diff algorithm, file formats to use, proxies,remotes and tons of other stuff. For a full list, see the git-config docs (http://www.kernel.org/pub/software/scm/git/docs/git-config.html)
+
+2. **git init** (http://www.kernel.org/pub/software/scm/git/docs/git-init.html) - Initializes a git repository – creates the initial ‘.git’ directory in a newor existing project.
+
+3. **git clone** (http://www.kernel.org/pub/software/scm/git/docs/git-clone.html) - Copies a Git repository from another place and adds the originallocation as a remote you can fetch from again and possibly push to if you have permission.
+
+4. **git add** (http://www.kernel.org/pub/software/scm/git/docs/git-add.html) - Adds changes in files in your working directory to your index, orstaging area.
+
+5. **git rm** (http://www.kernel.org/pub/software/scm/git/docs/git-rm.html) - Removes files from your index and your working directory so they willstopped being tracked.
+
+6. **git commit** (http://www.kernel.org/pub/software/scm/git/docs/git-commit.html) - Takes all of the changes staged in the index (that have been ‘gitadd’ed), creates a new commit object pointing to it, and advances the branch to point to that new commit.
+
+7. **git status** (http://www.kernel.org/pub/software/scm/git/docs/git-status.html) - Shows you the status of files in your index versus your workingdirectory. It will list out files that are untracked (only in your working directory), modified (tracked but not yet updated in your index), andstaged (added to your index and ready for committing).
+
+8. **git branch** (http://www.kernel.org/pub/software/scm/git/docs/git-branch.html) - Lists existing branches, including remote branches if ‘-a’ is provided.Creates a new branch if a branch name is provided. Branches can also be created with ‘-b’ option to ‘git checkout’.
+
+9. **git checkout** (http://www.kernel.org/pub/software/scm/git/docs/git-checkout.html) - Checks out a different branch – makes your working directory looklike the tree of the commit that branch points to and updates your HEAD to point to this branch now, so your next commit will modify it.
+
+10. **git merge** (http://www.kernel.org/pub/software/scm/git/docs/git-merge.html) - Merges one or more branches into your current branch and auto-matically creates anew commit if there are no conflicts.
+
+11. **git reset** (http://www.kernel.org/pub/software/scm/git/docs/git-reset.html) - Resets your index and working directory to the state of your lastcommit, in the event that something screwed up and you just want to go back.
+
+12. **git rebase** (http://www.kernel.org/pub/software/scm/git/docs/git-rebase.html) - An alternative to merge that rewrites your commit history to move commits since you branched off to apply to the current head instead. A bit dangerous as it discards existing commit objects.
+
+13. **git stash** (http://www.kernel.org/pub/software/scm/git/docs/git-stash.html) - Temporarily saves changes that you don’t want to commit immediately for later. Can re-apply the saved changes at any time.
+
+14. **git tag** (http://www.kernel.org/pub/software/scm/git/docs/git-tag.html) - Tags a specific commit with a simple, human readable handle that never moves.
+
+15. **git fetch** (http://www.kernel.org/pub/software/scm/git/docs/git-fetch.html) - Fetches all the objects that a remote version of your repository has that you do not yet so you can merge them into yours or simply inspect them.
+
+16. **git pull** (http://www.kernel.org/pub/software/scm/git/docs/git-pull.html) - Runs a ‘git fetch’ then a ‘git merge’.
+
+17. **git push** (http://www.kernel.org/pub/software/scm/git/docs/git-push.html) - Pushes all the objects that you have that a remote version does not yet have to that repository and advances its branches.
+
+18. **git remote** (http://www.kernel.org/pub/software/scm/git/docs/git-remote.html) - Lists all the remote versions of your repository, or can be used to addand delete them.
+
+## Inspecting Repositories
+
+1. **git log** (http://www.kernel.org/pub/software/scm/git/docs/git-log.html) - Shows a listing of commits on a branch or involving a specific file and optionally details about what changed between it and its parents.
+
+2. **git show** (http://www.kernel.org/pub/software/scm/git/docs/git-show.html) - Shows information about a git object, normally used to view commit information.
+
+3. **git ls-tree** (http://www.kernel.org/pub/software/scm/git/docs/git-ls-tree.html) - Shows a tree object, including the mode and name of each node andthe SHA-1 value of the blob or tree that it points to. Can also be run recursively to see all subtrees as well.
+
+4. **git cat-file** (http://www.kernel.org/pub/software/scm/git/docs/git-cat-file.html) - Used to view the type of an object if you only have the SHA-1 value,or used to redirect contents of files or view raw information about any object.
+
+5. **git grep** (http://www.kernel.org/pub/software/scm/git/docs/git-grep.html) - Lets you search through your trees of content for words and phrases  without having to actually check them out.
+
+6. **git diff** (http://www.kernel.org/pub/software/scm/git/docs/git-diff.html) - Generates patch files or statistics of differences between paths orfiles in your git repository, or your index or your working directory.
+
+7. **gitk** (http://www.kernel.org/pub/software/scm/git/docs/gitk.html) - Graphical Tcl/Tk based interface to a local Git repository.
+
+8. **git instaweb** (http://www.kernel.org/pub/software/scm/git/docs/git-instaweb.html) - Wrapper script to quickly run a web server with an interface into your repository and automatically directs a web browser to it.
+
+## Extra Tools
+
+1. **git archive** (http://www.kernel.org/pub/software/scm/git/docs/git-archive.html) - Creates a tar or zip file of the contents of a single tree from your repository. Easiest way to export a snapshot of content from your repository.
+
+2. **git gc** (http://www.kernel.org/pub/software/scm/git/docs/git-gc.html) - Garbage collector for your repository. Packs all your loose objects for space and speed efficiency and optionally removes unreachable objects as well. Should be run occasionally on each of your repos.
+
+3. **git fsck** (http://www.kernel.org/pub/software/scm/git/docs/git-fsck.html) - Does an integrity check of the Git “filesystem”, identifying dangling pointers and corrupted objects.
+
+4. **git prune** (http://www.kernel.org/pub/software/scm/git/docs/git-prune.html) - Removes objects that are no longer pointed to by any object in any reachable branch.
+
+5. **git-daemon** (http://www.kernel.org/pub/software/scm/git/docs/git-daemon.html) - Runs a simple, unauthenticated wrapper on the git-upload-pack program, used toprovide efficient, anonymous and unencrypted fetch access to a Git repository.
+
 
 ### To test your Knowlege you can go to - https://git-school.github.io/visualizing-git/
 
