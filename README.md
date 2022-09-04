@@ -98,6 +98,7 @@ author email
 - ```git reset``` = will remove all the files from the staging area
 - ```git reset --soft [hash of the commit upto which you want to delete the commit]``` = will not undo the changes but will 
 delete the commits above the specified hash of the commit.
+- ```git reset --soft HEAD~1``` = to delete the last commit [HEAD] without undoing the changes
 - ```git revert [hash of the commit]``` = will undo the changes **with a new commit** [Revert (the commit message)]
 
 <br>
