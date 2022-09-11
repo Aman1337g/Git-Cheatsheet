@@ -74,10 +74,6 @@ author email
 author email
 
 - ```git log --pretty=format:"%h -- %an"``` = will show abbreviated commit hash with (two --) in between and then author name
-
-- ```git log --amend``` = we can now merge our modified file into another author commit and change his message
-(this will then open vim editor and you can start editing by pressing 'i' on your keyboard then after writing press ESC 
- button and then write ':wq' to exit ) [**For more info you can go to -** https://www.atlassian.com/git/tutorials/rewriting-history]
  
 - ```git restore  --staged <file name>``` = will unstage the given file
 
@@ -147,7 +143,7 @@ Then add your key and you are good to go.
 - ```git checkout master``` = to switch again to master branch
 - ```git commit -a -m "message"``` = to skip the staging area and directly commit
 > Each commit has a unique SHA-1 hash and is 160bits or (20bytes).
-- ```git commit --amend``` = now we can add the changes done in the previous commit without adding a new commit.
+- ```git commit --amend``` = now we can add the changes done in the previous commit without adding a new commit.(this will open vim editor and you can start writing commit by pressing 'i' on your keyboard then after writing press ESC button and then write ':wq' to exit ) [**For more info you can go to -** https://www.atlassian.com/git/tutorials/rewriting-history] [writing ```git commit --amend --no-edit``` will save the newly added things with same last commit]
 - ```git branch``` = to list all the branches in your git repository
 - ```git merge branch_name``` = will merge branch in master branch
 > <<< = conflict resolution marker 
