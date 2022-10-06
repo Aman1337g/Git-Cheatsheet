@@ -130,6 +130,8 @@ Then add your key and you are good to go.
 <br>
 
 - ```git config --global alias.st status``` = will set alias for **git status** as **git st** globally. (You can create your own shortcuts according to your convenience)
+- ```git config --global --edit``` - to edit the global configuration file [your default editor(eg- vim) opens up]
+- ```git config --global --unset alias.'alias you want to delete'``` - to delete any alias you want
 
 <br>
 
