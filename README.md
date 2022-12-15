@@ -86,6 +86,8 @@ author email
 - ```git checkout HEAD``` = will move to the state of latest commit.
 - ```git checkout --<file_name>``` = will restore to the state when previous commit was done
 - ```git checkout -f``` = will restore your whole working directory
+- ```git checkout -- .``` = revert the uncommitted changes only in the current working directory
+- ```git checkout --``` =  list the files that will be reverted without actually making any action
 
 <br>
 
@@ -240,4 +242,3 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 <br>
 
 To test your Knowledge you can go to - https://git-school.github.io/visualizing-git/
-
