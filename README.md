@@ -241,5 +241,7 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 
 <br>
 
-To test your Knowledge you can go to - https://git-school.github.io/visualizing-git/<br>
-Another resource to learn git - https://gitimmersion.com/index.html
+## Resources
+- To test your Knowledge you can go to - https://git-school.github.io/visualizing-git/<br>
+- Another resource to learn git - https://gitimmersion.com/index.html</br>
+- If you want to dive deeper into Git, including learning about Cherry-Picking, Git Rebase and more I recommend completing the challenges here: https://learngitbranching.js.org/
