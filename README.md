@@ -127,6 +127,12 @@ delete the commits above the specified hash of the commit.
 Then add your key and you are good to go.
 <!-- <Then write git push -u origin master> -->
 
+If you have already a ssh in use, you can create a new ssh with different name using the `-f` flag :
+
+```
+ssh-keygen -t ed25519 -f <filename> -C <your_email@example.com>
+```
+
 ## Setting aliases in Git
 
 <br>
