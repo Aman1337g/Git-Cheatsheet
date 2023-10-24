@@ -127,11 +127,69 @@ delete the commits above the specified hash of the commit.
 Then add your key and you are good to go.
 <!-- <Then write git push -u origin master> -->
 
-If you have already a ssh in use, you can create a new ssh with different name using the `-f` flag :
+## Configuring Git for a Second GitHub Account
 
+If you have multiple GitHub accounts and want to use different accounts for specific repositories, you can configure Git to switch between them. Here's how to set up Git to use a second GitHub account for a particular repository:
+
+1. **Configure SSH Key Pair for the Second GitHub Account**:
+
+   First, ensure you have an SSH key pair set up for the second GitHub account you want to use:
+
+   - Generate a new SSH key pair for the second GitHub account:
+
+     ```bash
+     ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519_second_account -C "your_email@example.com"
+     ```
+
+   - Add the SSH key to your SSH agent:
+
+     ```bash
+     eval "$(ssh-agent -s)"
+     ssh-add ~/.ssh/id_ed25519_second_account
+     ```
+
+   - Copy the public key (`id_ed25519_second_account.pub`) to your second GitHub account's SSH settings in the GitHub account settings.
+
+2. **Edit Your SSH Configuration**:
+
+   To specify which SSH key to use for which GitHub account, create or edit your `~/.ssh/config` file. If this file doesn't exist, create it. Add the following configuration:
+
+   ```ssh
+   # Default GitHub account (first account)
+   Host github.com
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/id_ed25519
+
+   # Second GitHub account
+   Host github-second
+     HostName github.com
+     User git
+     IdentityFile ~/.ssh/id_ed25519_second_account
+    ```
+
+Replace `github-second` with a label you choose for the second GitHub account.
+
+1. **Update Git Configuration for the Specific Repository**:
+
+Navigate to the local repository where you want to use the second GitHub account. In that repository's directory, configure Git to use the second GitHub account by updating the `origin` remote URL:
+
+First, check the current URL of the remote:
+
+```bash
+git remote -v
 ```
-ssh-keygen -t ed25519 -f <filename> -C <your_email@example.com>
+
+Change the URL of the remote to use the second GitHub account:
+
+```bash
+git remote set-url origin git@github-second:username/repo.git
 ```
+Replace `username/repo.git` with the repository details you want to work with using the second GitHub account.
+
+Now, when you interact with the specific repository, Git will use the SSH key and configuration for the second GitHub account.
+
+Repeat these steps for other repositories where you want to use the second GitHub account. This way, you can have multiple GitHub accounts configured on your local machine and use them as needed.
 
 ## Setting aliases in Git
 
