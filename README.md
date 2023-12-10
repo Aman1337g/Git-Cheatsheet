@@ -103,9 +103,10 @@ delete the commits above the specified hash of the commit.
 
 ## Working with git Server
 - ```git remote``` = will show if you are connected to a server(Github etc..) or not 
-- ```git remote add origin <Your repo link>``` = set the repository name to origin on git server.
+- ```git remote add origin <Your repo link>``` = set the repository name to origin on git server
 - ```git remote -v``` = will tell you from where are you pushing and pulling a file
 - ```git push -u origin master``` = to push your repository from local device to the server
+- ```git push origin -d <branch_name>``` = Deletes a remote branch named <branch_name> in the Git repository hosted on the "origin" remote
 
 <br>
 
