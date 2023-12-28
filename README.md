@@ -200,6 +200,24 @@ Repeat these steps for other repositories where you want to use the second GitHu
 - ```git config --global --edit``` - to edit the global configuration file [your default editor(eg- vim) opens up]
 - ```git config --global --unset alias.'alias you want to delete'``` - to delete any alias you want
 
+### **List of some aliases I use myself :** edit using `git config --global --edit`
+```
+[alias]
+        s = status
+        a = add .
+        b = checkout -b
+        br = branch
+        del = delete -D
+        p = push
+        edit = config --global --edit
+        m = branch -M main
+        co = checkout
+        ci = commit -m
+        cia = commit -am
+        lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+```
+
 <br>
 
 ## BRANCH
