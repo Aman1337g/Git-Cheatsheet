@@ -310,6 +310,81 @@ git tag -a v1.1 = [to create a tag properly we use -a](here vim editor will open
 ```git push origin --delete <oldname>```
 <br>
 
+## Undoing mistakes with git using the command line
+
+- `git restore <filename>` - discarding all local changes in a file
+> Discarding uncommitted local changes cannot be undone!
+
+- `git restore <filename>` - restoring a deleted file
+
+- `git restore -p <filename>` - discarding chunks/lines in a file
+
+- `git restore .` - discarding all local changes
+> Discarding uncommitted local changes cannot be undone!
+
+- `git commit --amend -m 'correct commit'` - fixing the last commit
+> "--amend" rewrites history! Never change history for commits that have already been pushed to a remote repository 
+
+- `git revert <commit hash>` - reverting a commit in the middle
+> Non-destructive way by creation of a new commit instead of swapping
+
+- `git reset --hard <commit hash>` - resetting to an old revision
+> "--hard" remove the commits after <commit hash>, to preserve them use "--mixed"
+
+- `git restore --source <commit hash> <filename>` - resetting a file to an old revision
+
+- `git reflog` and `git branch happy-ending <commit hash>` - recovering deleted commits
+
+- `git reflog` and `git branch develop <commit hash>` - recovering a deleted branch
+
+- `git branch feature/name` and `git reset HEAD~1 --hard` - moving a commit to a new branch
+
+- Moving commit to a different branch
+```bash
+git checkout feature/name
+git cherry-pick <commit hash>
+git checkout master
+git reset --hard HEAD~1
+```
+
+- Interactive Rebase - Step by Step
+```bash
+# 1. How far back do you want to go? What should be the "base" commit?
+# 2. $ git rebase -i HEAD~3 (if third commit from the head)
+# 3. In the editor, only determine which actions you want to perform. Don't change commit data
+#    in this step, yet! Notice: Commits are in "reverse" order!
+```
+### Rebase Actions
+1. **pick**: This is the default action. It simply applies the commit as-is.
+2. **reword**: Allows you to change the commit message for the selected commit.
+3. **edit**: Pauses the rebase process, allowing you to amend the commit. You can add or remove changes, split the commit into multiple commits, or even discard the commit entirely.
+4. **squash**: Combines the selected commit with the previous commit. You can squash multiple commits into one to condense your commit history.
+5. **fixup**: Similar to squash, but it discards the commit message of the selected commit and keeps the message of the previous commit.
+6. **drop**: Removes the selected commit from the commit history.
+7. **exec**: Allows you to run arbitrary shell commands during the rebase.
+
+- `git rebase -i <commit hash>` and use "drop" action - deleting old commits
+
+- Squashing multiple commits into one
+```bash
+git rebase -i HEAD~3
+# ...then use "squash" option
+```
+
+- Adding a change to an old commit
+```bash
+git commit --fixup <commit hash>
+git rebase -i --autosquash HEAD~4  #(change it according to need)
+```
+
+- Use the previous commands(rebase, restore -p, ...) - Splitting/Editing an old commit
+> Caution 󰒡 when rewriting history!
+Do NOT rewrite commit history that has already been pushed to a remote repository!
+>* Amending Commits
+>* Rebase
+>* Reset
+>* ...
+
 ## Extra Tools
 
 1. **git archive** (http://www.kernel.org/pub/software/scm/git/docs/git-archive.html) - Creates a tar or zip file of the contents of a single tree from your repository. Easiest way to export a snapshot of content from your repository.
